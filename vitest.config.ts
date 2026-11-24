@@ -5,6 +5,8 @@ export default defineConfig({
 		DEBUG_MODE: false,
 	},
 	test: {
+		// Date fixtures are recorded in this timezone, independent of the host.
+		env: { TZ: 'America/Los_Angeles' },
 		include: ['src/**/*.test.ts'],
 		globals: true,
 		alias: {
